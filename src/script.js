@@ -16,18 +16,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-function addToCart(name, price, image) {
+function addToCart(name, price, img) {
     let cart = JSON.parse(localStorage.getItem('pixelForgeCart')) || [];
-
-    const product = {
-        name: name,
-        price: price,
-        img: image
-    };
-
-    cart.push(product);
-
+    cart.push({ name, price, img });
     localStorage.setItem('pixelForgeCart', JSON.stringify(cart));
-
-    alert(name + " wurde hinzugefügt!");
 }
+
+function playVideo(card) {
+    const video = card.querySelector('.preview-video');
+    if (video) {
+        video.play();
+    }
+}
+
+function pauseVideo(card) {
+    const video = card.querySelector('.preview-video');
+    if (video) {
+        video.pause();
+        video.currentTime = 0;
+    }
+}
+

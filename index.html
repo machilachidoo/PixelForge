@@ -42,32 +42,44 @@
     <h2>Unsere Top-Assets </h2>
     <div class="grid">
 
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=500&q=80" alt="Cyberpunk Overlay">
-            <h3>Stream Overlay Pack "Cyberpunk"</h3>
-            <p style="color: #b3b3b3; font-size: 0.9rem;">Animierte Overlays, Alerts & Banner für Twitch.</p>
+        <div class="product-card" onmouseenter="playVideo(this)" onmouseleave="pauseVideo(this)">
+            <div class="media-container">
+                <img src="src/img/RedMoonPNG.png" alt="Overlay Preview" class="thumb">
+
+                <video src="src/video/RedMoonPackage.mp4" loop muted playsinline class="preview-video"></video>
+            </div>
+            <h3>Red Moon Pack</h3>
+            <p style="color: #b3b3b3; font-size: 0.9rem;">Animierte Overlay, Alerts, custom Emotes, Thumbnail</p>
             <p class="price">14.99 €</p>
-            <button type="button" onclick="addToCart('Stream Overlay Pack Cyberpunk', 14.99, 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=500&q=80')">
+            <button type="button" onclick="addToCart('Red Moon Pack', 14.99, 'src/img/RedMoonPNG.png')">
                 In den Warenkorb
             </button>
         </div>
 
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=500&q=80" alt="3D Console">
-            <h3>3D Retro Console Modell</h3>
-            <p style="color: #b3b3b3; font-size: 0.9rem;">Low-Poly Blender-Modell inkl. Texturen.</p>
-            <p class="price">24.99 €</p>
-            <button type="button" onclick="addToCart('3D Retro Console Modell', 24.99, 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=500&q=80')">
-                In den Warenkorb
-            </button>
-        </div>
+        <div class="product-card" onmouseenter="playVideo(this)" onmouseleave="pauseVideo(this)">
+            <div class="media-container">
+                <img src="src/img/BlueSpacePNG.png" alt="Blue Space Overlay">
 
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=500&q=80" alt="Neon Presets">
-            <h3>Lightroom Presets "Neon Vibes"</h3>
-            <p style="color: #b3b3b3; font-size: 0.9rem;">10x Fotofilter für Instagram & Social Media.</p>
+                <video src="src/video/BlueSpaceOverlay.mp4" loop muted playsinline class="preview-video"></video>
+            </div>
+            <h3>Blue Space Pack </h3>
+            <p style="color: #b3b3b3; font-size: 0.9rem;">Animierte Overlay, Alerts</p>
             <p class="price">9.99 €</p>
-            <button type="button" onclick="addToCart('Lightroom Presets Neon Vibes', 9.99, 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=500&q=80')">
+            <button type="button" onclick="addToCart('Blue Space Overlay', 9.99, 'src/img/BlueSpacePNG.png')">
+                In den Warenkorb
+            </button>
+        </div>
+
+        <div class="product-card" onmouseenter="playVideo(this)" onmouseleave="pauseVideo(this)">
+            <div class="media-container">
+                <img src="src/img/AnimeOverlayPNG.png" alt="Anime Girl Overlay">
+
+                <video src="src/video/AnimeOverlay.mp4" loop muted playsinline class="preview-video"></video>
+            </div>
+            <h3>Anime Streamer Pack</h3>
+            <p style="color: #b3b3b3; font-size: 0.9rem;">Animierte Overlay mit originalen anime Character, custom Emotes, Thumbnail. </p>
+            <p class="price">24.99 €</p>
+            <button type="button" onclick="addToCart('Anime Streamer Pack', 24.99, 'src/img/AnimeOverlayPNG.png')">
                 In den Warenkorb
             </button>
         </div>
@@ -85,6 +97,7 @@
         <a href="license.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Lizenzbestimmungen</a>
         <a href="impressum.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Impressum</a>
         <a href="barrierefreiheit.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Barrierefreiheit</a>
+        <a href="credits.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Credits</a>
     </div>
     <p style="color: #666; font-size: 0.8rem;">&copy; 2026 PixelForge. Alle Rechte vorbehalten.</p>
 </footer>
