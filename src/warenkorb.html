@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warenkorb | PixelForge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Dein Warenkorb</h1>
+
+    <div class="cart-layout" id="cart-layout">
+        <div class="cart-items-container" id="cart-list">
+        </div>
+
+        <div class="checkout-box">
+            <div class="total-row">
+                <span>Gesamtsumme:</span>
+                <span id="total-price">0,00 €</span>
+            </div>
+            <button class="checkout-btn" onclick="alert('Danke für dein Vertrauen! Checkout-Prozess startet...')">
+                Jetzt sicher bezahlen
+            </button>
+            <p style="font-size: 0.8rem; color: #b3b3b3; margin-top: 15px; text-align: center;">
+                🔒 SSL verschlüsselt & Sicher
+            </p>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-to-shop">← Weiter einkaufen</a>
+</div>
+
+<script>
+    function renderCart() {
+        const cartList = document.getElementById('cart-list');
+        const totalPriceEl = document.getElementById('total-price');
+        const cartLayout = document.getElementById('cart-layout');
+
+        let cart = JSON.parse(localStorage.getItem('pixelForgeCart')) || [];
+
+        if (cart.length === 0) {
+            cartLayout.innerHTML = '<div class="empty-msg"><h2>Dein Warenkorb ist leer.</h2>' +
+                '<p>Füge Produkte im Shop hinzu, um sie hier zu sehen.</p></div>';
+            return;
+        }
+
+        cartList.innerHTML = '';
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            total += item.price;
+            cartList.innerHTML += `
+                <div class="cart-item">
+                    <img src="${item.img}" alt="${item.name}">
+                    <div class="item-details">
+                        <h3>${item.name}</h3>
+                    </div>
+                    <div class="item-price">${item.price.toFixed(2)} €</div>
+                    <button class="remove-btn" onclick="removeItem(${index})">Entfernen</button>
+                </div>
+            `;
+        });
+
+        totalPriceEl.innerText = total.toFixed(2) + ' €';
+    }
+
+    function removeItem(index) {
+        let cart = JSON.parse(localStorage.getItem('pixelForgeCart')) || [];
+        cart.splice(index, 1);
+        localStorage.setItem('pixelForgeCart', JSON.stringify(cart));
+        renderCart();
+    }
+
+    renderCart();
+</script>
+</body>
+</html>
