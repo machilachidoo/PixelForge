@@ -58,6 +58,7 @@
             </p>
         </section>
 
+
         <section class="legal-card">
             <h2>Umsatzsteuer-ID</h2>
             <p>
@@ -74,7 +75,33 @@
                 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
             </p>
         </section>
+
+        <section class="legal-card">
+            <h2>Direktnachricht</h2>
+
+            <div id="success-message" style="display: none; background: rgba(168, 85, 247, 0.1); border: 1px solid #a855f7; color: white; padding: 15px; border-radius: 6px; margin-top: 15px; text-align: center;">
+                <strong>Vielen Dank!</strong> Deine Nachricht wurde (simuliert) gesendet.
+            </div>
+
+            <form id="mock-form" style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <label for="name" style="font-size: 0.9rem; color: #b3b3b3;">Dein Name</label>
+                    <input type="text" id="name" required style="padding: 10px; background: #1a1a24; border: 1px solid #282830; color: white; border-radius: 6px;">
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <label for="message" style="font-size: 0.9rem; color: #b3b3b3;">Deine Nachricht</label>
+                    <textarea id="message" rows="4" required style="padding: 10px; background: #1a1a24; border: 1px solid #282830; color: white; border-radius: 6px; resize: vertical;" placeholder="Schreib Sie hier etwas rein..."></textarea>
+                </div>
+
+                <button type="submit" style="padding: 12px; background: #a855f7; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">
+                    Nachricht senden
+                </button>
+            </form>
+        </section>
+
     </div>
+
 
     <footer style="margin-top: 100px; padding: 40px 0; border-top: 1px solid #282830; text-align: center;">
         <div style="margin-bottom: 20px;">
@@ -85,6 +112,7 @@
             <a href="license.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Lizenzbestimmungen</a>
             <a href="impressum.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Impressum</a>
             <a href="barrierefreiheit.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Barrierefreiheit</a>
+            <a href="datenschutz.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Datenschutz</a>
             <a href="credits.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Credits</a>
         </div>
         <p style="color: #666; font-size: 0.8rem;">&copy; 2026 PixelForge. Alle Rechte vorbehalten.</p>

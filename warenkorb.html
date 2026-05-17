@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
+<header class="main-header">
+    <div class="logo-group">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="src/img/PixelForgeDarkerBG.png" alt="PixelForge Logo" class="logo-img">
+            <img src="src/img/PixelForgeTextLogoDarkerBG.png" alt="PixelForge Text" class="logo-text">
+        </a>
+    </div>
+    <nav>
+        <a href="index.html">Shop</a>
+        <a href="about.html">Über uns</a>
+        <a href="warenkorb.html">Warenkorb</a>
+    </nav>
+</header>
+
 <div class="container">
     <h1>Dein Warenkorb</h1>
 
@@ -28,9 +42,24 @@
         </div>
     </div>
 
-    <a href="index.html" class="back-to-shop">← Weiter einkaufen</a>
+    <a href="index.html" class="back-to-shop"> <img src="src/img/PixelForgeTextLogoDarkerBG.png" alt="PixelForge Logo" class="logo-text"></a>
 </div>
 
+
+<footer style="margin-top: 100px; padding: 40px 0; border-top: 1px solid #282830; text-align: center;">
+    <div style="margin-bottom: 20px;">
+        <img src="src/img/PixelForgeDarkerBG.png" alt="Logo" style="height: 30px; opacity: 0.5;">
+    </div>
+    <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 20px;">
+        <a href="about.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Über uns</a>
+        <a href="license.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Lizenzbestimmungen</a>
+        <a href="impressum.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Impressum</a>
+        <a href="barrierefreiheit.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Barrierefreiheit</a>
+        <a href="datenschutz.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Datenschutz</a>
+        <a href="credits.html" style="color: #b3b3b3; text-decoration: none; font-size: 0.9rem;">Credits</a>
+    </div>
+    <p style="color: #666; font-size: 0.8rem;">&copy; 2026 PixelForge. Alle Rechte vorbehalten.</p>
+</footer>
 
 <script>
     function renderCart() {

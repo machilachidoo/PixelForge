@@ -36,4 +36,15 @@ function pauseVideo(card) {
         video.currentTime = 0;
     }
 }
+document.getElementById('mock-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
+    document.getElementById('mock-form').style.display = 'none';
+    document.getElementById('success-message').style.display = 'block';
+
+    setTimeout(function() {
+        document.getElementById('mock-form').reset();
+        document.getElementById('mock-form').style.display = 'flex';
+        document.getElementById('success-message').style.display = 'none';
+    }, 4000);
+});
